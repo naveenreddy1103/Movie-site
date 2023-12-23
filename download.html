@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> dowmnload</title>
+    <link rel="stylesheet" href="p.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .container button:disabled{
+            background-color:green;
+            color:white;
+            padding:10px;
+            text-align:center;
+            margin-top:50px;
+            margin-left:40%;
+        }
+        .container button{
+            background-color:yellowgreen;
+            color:white;
+            padding:10px;
+            text-align:center;
+            margin-top:50px;
+            margin-left:45%;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+<body oncntextmenu="return false">
+    <nav>
+        <div class="logo"><img src="iBomma.png" alt="logo">
+        </div>
+        <div class="nav-items">
+            <a href="#"><i class="fa-solid fa-user-group"></i>About</a>
+            <a href="#"><i class="fa fa-bug" aria-hidden="true"></i>bug repoort</a>
+            <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>contacts</a>
+        </div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="search" >
+            <button type="submit" class="fa-solid fa-search"></button>
+        </form> 
+    </nav>
+    <div class="container">
+        <a href="Dum.mp4" download="Dum"><button id="download" disabled>Download</button></a>
+    </div>
+    <script>
+        var downloadBtn= document.getElementById("download");
+        var counter=5;
+        downloadBtn.innerHTML="please wait for 5 seconds.";
+        var id;
+        id=setInterval(function()
+        {
+            counter--;
+            if(counter<0){
+                downloadBtn.innerHTML = "Download";
+                downloadBtn.removeAttribute('disabled');
+                clearInterval(id)
+            }else{
+                downloadBtn.innerHTML="please wait for " + counter.toString()+"seconnds.";
+            }
+        },1000)
+    </script>    
+</body>
+</html>
+
+
+

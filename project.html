@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+    </style>
+    <title>bomma1</title>
+    <link rel="stylesheet" href="p.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body oncontextmenu="return false">
+    <nav>
+        <div class="logo"><img src="chenchu (2).png" alt="logo">
+        </div>
+        <div class="nav-items">
+            <a href="#"><i class="fa-solid fa-user-group"></i>About</a>
+            <a href="#"><i class="fa fa-bug" aria-hidden="true"></i>bug repoort</a>
+            <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>contacts</a>
+        </div>
+        <form action="#">
+           <input type="search" name="" class="search-data" placeholder="search"
+           id="searchInput" oninput="search()">
+            <button type="submit" class="fa-solid fa-search"></button>
+        </form>
+        
+    </nav>
+    <div class="content">
+        <h1>where Quality & clarity Matters</h1>
+        <p>watch / Download telugu movies in an excellent quality at the smallest file size <br>
+        Exclusity designed and developed for  the smart phones, tables and pcs</p>
+        <p><i class="fa fa-star" aria-hidden="true"></i> Remove the browser cache,reload</p>
+        <img src="green-fancy-line-hi.png" height="60" >
+    </div>
+    <section class="movie-items">
+        <div class="row" id="row">
+            <div class="colomn" data-name="Bhahubali">
+                <a href="bhahubali.html"><img src="bhahubali.jpg" height="200" ></a>
+                <h4>bhahubali</h4>
+                <p>2016</p></a>
+            </div>
+            <div class="colomn" data-name="eega">
+                <a href="eega.html"><img src="eega.jpeg" height="200" ></a>
+                <h4>eega</h4>
+                <p>2012</p>
+            </div>
+            <div class="colomn" data-name="mirchi">
+                <a href="mirchi.html"><img src="mirchi.jpg" height="200" ></a>
+                <h4>mirchi</h4>
+                <p>2013</p>
+            </div>
+            <div class="colomn" data-name="saaho">
+                <a href="saaho.html"><img src="sahoo.jpg" height="200" ></a>
+                <h4>Saaho</h4>
+                <p>2019</p>
+            </div>
+            <div class="colomn" data-name="salaar">
+                <a href="salaar.html"><img src="salaar-photo-10.jpg" height="200" ></a>
+                <h4>salaar</h4>
+                <p>2023</p>
+            </div>
+            <div class="colomn" data-name="Vikram">
+                <a href="vikram.html"><img src="Vikram-Poster-2.jpg" height="200" ></a>
+                <h4>vikram</h4>
+                <p>2022</p>
+            </div>
+        </div>
+    <br>
+
+
+
+        <div class="row">
+            <div class="colomn" data-name="Pushpa">
+                <a href="pushpa.html"><img src="Pushpa.webp" height="200" ></a>
+                <h4>Pushpa</h4>
+                <p>2021</p>
+            </div>
+            <div class="colomn" data-name="96">
+                <a href="96.html"><img src="96.jpg" height="200" ></a>
+                <h4>96</h4>
+                <p>2018</p>
+            </div>
+            <div class="colomn" data-name="Ayothi">
+                <a href="ayothi.html"><img src="ayothi.webp" height="200" ></a>
+                <h4>Ayothi</h4>
+                <p>2023</p>
+            </div>
+            <div class="colomn" data-name="Master">
+                <a href="master.html"><img src="Master.webp" height="200" ></a>
+                <h4>Master</h4>
+                <p>2021</p>
+            </div>
+            <div class="colomn" data-name="Super-Deluxe">
+                <a href="super.html"><img src="Super-Deluxe.jpg" height="200" ></a>
+                <h4>Super-Deluxe</h4>
+                <p>2019</p>
+            </div>
+            <div class="colomn" data-name="Karthikeya-2">
+                <a href="karthikeya.html"><img src="karthikeyaa-2.jpg" height="200" ></a>
+                <h4>Karthikeya-2</h4>
+                <p>2022</p>
+            </div>
+        </div>
+
+    </section>
+    <script>
+         function search() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll(".colomn");
+
+    cards.forEach(card => {
+        const productName = card.getAttribute("data-name").toLowerCase();
+        if (productName.includes(searchInput)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+            
+    </script>
+    
+</body>
+</html>
